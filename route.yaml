@@ -5,7 +5,7 @@ metadata:
 spec:
   host: mysite-test.apps-crc.testing
   port:
-    targetPort: 80
+    targetPort: 8080
   to:
     kind: Service
     name: mysite

@@ -22,12 +22,14 @@ spec:
       labels:
         deployment: mysite
     spec:
+      imagePullSecrets:
+      - name: dockerhub-pull-secret
       containers:
-        - image: httpd
+        - image: docker.io/patricechaura/my-custom-httpd
           imagePullPolicy: IfNotPresent
           name: mysite
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log

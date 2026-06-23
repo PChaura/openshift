@@ -4,10 +4,10 @@ metadata:
   name: mysite
 spec:
   ports:
-  - name: 80-tcp
-    port: 80
+  - name: 8080-tcp
+    port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
     deployment: mysite
   sessionAffinity: None
