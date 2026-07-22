@@ -1,6 +1,8 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
+  argocd.argoproj.io/sync-wave: "2"
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: mysite
 spec:
   host: mysite-test.apps-crc.testing
